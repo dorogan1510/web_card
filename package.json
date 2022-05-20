@@ -1,0 +1,29 @@
+{
+  "name": "web_card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorogan1510/web_card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorogan1510/web_card/issues"
+  },
+  "homepage": "https://github.com/dorogan1510/web_card#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.52.0",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}
