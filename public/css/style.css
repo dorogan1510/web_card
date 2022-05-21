@@ -86,57 +86,298 @@ h6 {
 
 /*--------------------*/
 body {
-  font-family: Georgia, Raleway;
+  font-family: Raleway;
+  background-color: #fff7ea;
 }
 
-.bg {
-  background-image: url(/src/img/bg.jpg);
-  background-size: cover;
-  max-width: 100%;
-  height: 100%;
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 110px;
+  margin-top: 30px;
+}
+header nav a {
+  margin-left: 60px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: rgb(47, 47, 47);
+  position: relative;
+}
+header nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background: linear-gradient(#856d47, #d4c6ae);
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header nav a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 main {
-  padding: 80px 0 0 120px;
+  margin-bottom: 100px;
 }
-main h2 {
-  font-family: Raleway;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 14px;
+main .flex {
+  padding-top: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+main .left-side {
+  margin-left: 70px;
+}
+main .img {
+  width: 400px;
+  height: 400px;
+  margin-right: 150px;
+  border-radius: 230px;
 }
 main h1 {
-  font-family: inherit;
-  font-size: 44px;
+  width: 822px;
+  height: 210px;
+  font-size: 64px;
   font-weight: bold;
+  line-height: 70px;
+  color: rgb(47, 47, 47);
   margin-bottom: 20px;
 }
-main ul {
-  font-family: Raleway;
-  font-size: 18px;
+main p {
+  width: 594px;
+  height: 108px;
+  font-style: normal;
   font-weight: 500;
-  width: 460px;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgb(47, 47, 47);
+  letter-spacing: -0.5px;
+}
+main ul {
+  font-size: 21px;
+  font-weight: 500;
+  width: 650px;
 }
 main li {
   list-style: inside;
   margin-bottom: 10px;
+  line-height: 1.5;
+}
+main .contacts {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  width: 750px;
+  height: 90px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+main .contacts::before {
+  content: "";
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  z-index: -2;
+  background: linear-gradient(#856d47, #d4c6ae);
+  -webkit-animation: rotate1 6s linear infinite;
+          animation: rotate1 6s linear infinite;
+}
+main .contacts:hover:before {
+  background: linear-gradient(#856d47, #d4c6ae);
+  -webkit-animation: rotate1 6s linear infinite;
+          animation: rotate1 6s linear infinite;
+}
+main .contacts::after {
+  content: "";
+  z-index: -2;
+  background-color: #fff7ea;
+  position: absolute;
+  border-radius: 20px;
+  inset: 4px;
+}
+@-webkit-keyframes rotate1 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+main .contacts__email {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(47, 47, 47);
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+main .contacts__social_link {
+  width: 60px;
+  height: 60px;
+  margin-left: 36px;
+}
+
+.about-left {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 70px;
+  color: rgb(47, 47, 47);
+  letter-spacing: -0.5px;
+  position: relative;
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.about-left.__active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.about-right {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 70px;
+  color: rgb(47, 47, 47);
+  letter-spacing: -0.5px;
+  position: relative;
+  transform: translateX(1000px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.about-right.__active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 40px;
+  margin-bottom: 5px;
+  background-color: #856d47;
+  color: white;
+  border-radius: 20px;
+}
+section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+section p,
+section ul,
+section h3 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+section li {
+  list-style: inside;
+}
+
+.individual-sessions {
+  margin-left: auto;
+  margin-right: auto;
+  width: 731px;
+  height: 288px;
+}
+.individual-sessions h2 {
+  text-align: center;
+}
+.individual-sessions__flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.individual-sessions__flex-container p {
+  width: 320px;
+  height: 170px;
+}
+.individual-sessions__flex-container h3 {
+  margin-bottom: 20px;
+}
+
+.consultation-for-repetitors {
+  width: 530px;
+  height: 460px;
+  margin-right: 5px;
+}
+.consultation-for-repetitors p {
+  width: 452px;
+  height: 335px;
+}
+.consultation-for-repetitors__flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.consultation-for-specific-requests {
+  width: 523px;
+  height: 228px;
+}
+.consultation-for-specific-requests__flex-container {
+  width: 475px;
+  height: 84px;
+}
+
+.telegram-with-helpful-information {
+  width: 523px;
+  height: 228px;
+}
+.checklist-for-card-games {
+  width: 523px;
+  height: 228px;
+}
+.checklist-with-usefull-stuff {
+  width: 523px;
+  height: 228px;
+}
+.telegram-with-textbooks-and-materials {
+  width: 530px;
+  height: 460px;
+  margin-left: 5px;
+}
+.first-flex-main-section {
+  display: flex;
+  justify-content: center;
+}
+.first-flex-main-section__right-side {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.second-main-flex-section {
+  display: flex;
+  justify-content: center;
+}
+.second-main-flex-section__left-side {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 footer {
   padding-left: 120px;
   margin-top: 90px;
-}
-footer .email {
-  display: inline-block;
-  font-family: raleway;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 20px;
-}
-footer .social_link {
-  width: 40px;
-  height: 40px;
-  margin-right: 16px;
 }

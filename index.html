@@ -6,65 +6,191 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./public/css/style.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Raleway:wght@300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
         <title>Document</title>
     </head>
     <body>
-        <div class="bg">
-            <main>
-                <h2>Твой личный преподаватель</h2>
-                <h1>Ксения Сухарева</h1>
-                <ul>
-                    <li>Преподаю английский с 2017 года.</li>
-                    <li>
-                        Закончила Санкт-Петербургский государственный
-                        университет, Восточный факультет, обучила более 60
-                        учеников.
-                    </li>
-                    <li>
-                        Главное для меня — комфорт каждого ученика во время
-                        всего процесса обучения.
-                    </li>
-                    <li>
-                        На своих уроках я даю грамматическую базу языка,
-                        разговорную практику и практику чтения и перевода. Также
-                        мы смотрим и разбираем видео, отрывки из фильмов,
-                        слушаем ваши любимые песни.
-                    </li>
-                    <li>
-                        Для каждого ученика разрабатывается индивидуальная
-                        программа в соответствии с целями.
-                    </li>
-                    <li>
-                        Работаю с четырьмя языками (английский, французский,
-                        арабский, турецкий) и буду рада помочь вам шаг за шагом
-                        осуществить свою мечту заговорить на английском!
-                    </li>
-                </ul>
-            </main>
+        <header>
+            <nav>
+                <a href="">Обо мне</a>
+                <a href="">Мои услуги</a>
+            </nav>
+        </header>
 
-            <footer>
-                <a class="email" href="mailto: ksunchik459@gmail.com"
+        <main>
+            <div class="flex">
+                <div class="left-side">
+                    <h1>
+                        Привет! Меня зовут Ксения и я твой <br />личный
+                        преподаватель
+                    </h1>
+                    <p>
+                        Главное для меня — комфорт каждого ученика во время
+                        всего процесса обучения
+                    </p>
+                </div>
+
+                <img class="img" src="./src/img/bg1.jpg" />
+            </div>
+
+            <div class="contacts">
+                <a class="contacts__email" href="mailto: ksunchik459@gmail.com"
                     >ksunchik459@gmail.com</a
                 >
                 <div>
                     <a href="https://vk.me/id246389144"
-                        ><img class="social_link" src="./src/img/vk.svg"
+                        ><img
+                            class="contacts__social_link"
+                            src="./src/img/vk.svg"
                     /></a>
                     <a href="https://api.whatsapp.com/send?phone=79523715490"
-                        ><img class="social_link" src="./src/img/whatsapp.svg"
+                        ><img
+                            class="contacts__social_link"
+                            src="./src/img/whatsapp.svg"
                     /></a>
                     <a href="https://t.me/ksenia459"
-                        ><img class="social_link" src="./src/img/telegram.svg"
+                        ><img
+                            class="contacts__social_link"
+                            src="./src/img/telegram.svg"
                     /></a>
                     <a href="skype:live:ksunchik459?chat"
-                        ><img class="social_link" src="./src/img/skype.svg"
+                        ><img
+                            class="contacts__social_link"
+                            src="./src/img/skype.svg"
                     /></a>
                 </div>
-            </footer>
+            </div>
+        </main>
+
+        <!-- About me -->
+        <div class="about-left">Преподаю английский с 2017 года.</div>
+        <div class="about-right">
+            Закончила Санкт-Петербургский государственный университет,
+            Восточный факультет, обучила более 60 учеников.
         </div>
+        <div class="about-left">
+            На своих уроках я даю грамматическую базу языка, разговорную
+            практику и практику чтения и перевода. Также мы смотрим и
+            разбираем видео, отрывки из фильмов, слушаем ваши любимые песни.
+        </div>
+        <div class="about-right">
+            Для каждого ученика разрабатывается индивидуальная программа в
+            соответствии с целями.
+        </div>
+        <div class="about-left">
+            Работаю с четырьмя языками (английский, французский, арабский,
+            турецкий) и буду рада помочь вам шаг за шагом осуществить свою
+            мечту заговорить на английском!
+        </div>
+
+        <!-- My services -->
+        <section class="individual-sessions">
+            <h2>Индивидуальные занятия</h2>
+            <div class="individual-sessions__flex-container">
+                <p>
+                    Формат обучения — только онлайн 60 минут — 20$ <br />90
+                    минут — 30$ <br />Оплату также можно произвести в любой
+                    удобной для вас валюте по текущему курсу
+                </p>
+                <div class="rightside">
+                    <h3>Доступные для изучения языки:</h3>
+                    <ul>
+                        <li>Английский</li>
+                        <li>Французский</li>
+                        <li>Арабский</li>
+                        <li>Турецкий</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="first-flex-main-section">
+            <section class="consultation-for-repetitors">
+                <h2>Консультация для преподавателей</h2>
+                <div class="consultation-for-repetitors__flex-container">
+                    <p>
+                        Длительность — 2 часа <br />Стоимость — 3000₽
+                        <br /><br />
+                        Бонусом вы получите конспект всей консультации и чек
+                        лист, в котором собраны и проанализированы самые
+                        актуальные материалы, которые вы сможете использовать в
+                        своих занятиях.
+                        <br /><br />На консультации мы разберем все актуальные
+                        вопросы, которые могут возникнуть у вас в начале пути.
+                        Подробный план можно посмотреть в закрепленной сторис
+                        "Консультации" в инстаграме.
+                    </p>
+                </div>
+            </section>
+            <div class="first-flex-main-section__right-side">
+                <section class="consultation-for-specific-requests">
+                    <h2>Консультация по конкретным запросам</h2>
+                    <div
+                        class="consultation-for-specific-requests__flex-container"
+                    >
+                        <p>
+                            Длительность 1 ч. — Стоимость 1500₽ <br />Мы
+                            разберем ваши вопросы и рассмотрим конкретные
+                            ситуации во время процесса работы.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="telegram-with-helpful-information">
+                    <h2>Телеграм канал с полезной информацией</h2>
+                    <div
+                        class="telegram-with-helpful-information__flex-container"
+                    >
+                        <p>
+                            Стоимость — бесплатно
+<br>Здесь вы можете найти множество текстовых, аудио и видео материалов, готовых заданий, рабочих листов и обучающих ресурсов.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- End of first flex-main-section -->
+
+        <div class="second-main-flex-section">
+        <div class="second-main-flex-section_left-side">
+        <section class="checklist-for-card-games">
+            <h2>Чек лист по играм с карточками</h2>
+            <div class="checklist-for-card-games__flex-container">
+                <p>
+                    Стоимость — бесплатно
+                </p>
+            </div>
+        </section>
+
+        <section class="checklist-with-usefull-stuff">
+            <h2>Чек лист с полезными материалами</h2>
+            <div class="checklist-with-usefull-stuff__flex-container">
+                <p>
+                    Стоимость — 500₽. Чтобы приобрести чек лист напишите мне в личные сообщения. В нем собраны самые актуальные и современные учебники, пособия и другие дополнительные материалы.
+                </p>
+            </div>
+        </section>
+    </div>
+
+        <section class="telegram-with-textbooks-and-materials">
+            <h2>Телеграм канал с учебниками и материалами для занятий</h2>
+            <div class="telegram-with-textbooks-and-materials__flex-container">
+                <p>
+                    Доступ в канал — навсегда <br />Стоимость — 700₽ <br />Чтобы
+                    получить ссылку на канал напишите мне в личные сообщения.
+                    <br /><br />Здесь находятся множество популярных учебников и
+                    книг на английском и французском языках, а также мои
+                    авторские уроки, которые вы сможете применить в своей
+                    работе. Примеры учебников на канале (English file; Go
+                    Getter; Impact; Speakout; Kidsbox; Oxford phonics)
+                </p>
+            </div>
+        </section>
+    </div>
+    </div>
+
+        <footer></footer>
     </body>
     <script src="./public/js/index.js"></script>
 </html>

@@ -7,7 +7,36 @@
   \*************************/
 /***/ (() => {
 
+var reveal = function reveal() {
+  var scrollByElementLeft = document.querySelectorAll('.about-left');
+  var scrollByElementRight = document.querySelectorAll('.about-right');
 
+  for (var i = 0; i < scrollByElementRight.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = scrollByElementRight[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      scrollByElementRight[i].classList.add('__active');
+    } else {
+      scrollByElementRight[i].classList.remove('__active');
+    }
+  }
+
+  for (var i = 0; i < scrollByElementLeft.length; i++) {
+    var _windowHeight = window.innerHeight;
+    var _elementTop = scrollByElementLeft[i].getBoundingClientRect().top;
+    var _elementVisible = 150;
+
+    if (_elementTop < _windowHeight - _elementVisible) {
+      scrollByElementLeft[i].classList.add('__active');
+    } else {
+      scrollByElementLeft[i].classList.remove('__active');
+    }
+  }
+};
+
+window.addEventListener('scroll', reveal);
 
 /***/ }),
 
