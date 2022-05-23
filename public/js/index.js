@@ -8,35 +8,72 @@
 /***/ (() => {
 
 var reveal = function reveal() {
+  // about me animations
   var scrollByElementLeft = document.querySelectorAll('.about-left');
   var scrollByElementRight = document.querySelectorAll('.about-right');
 
-  for (var i = 0; i < scrollByElementRight.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = scrollByElementRight[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+  var cycleForAbout = function cycleForAbout(event) {
+    for (var i = 0; i < event.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = event[i].getBoundingClientRect().top;
+      var elementVisible = 150;
 
-    if (elementTop < windowHeight - elementVisible) {
-      scrollByElementRight[i].classList.add('__active');
-    } else {
-      scrollByElementRight[i].classList.remove('__active');
+      if (elementTop < windowHeight - elementVisible) {
+        event[i].classList.add('__active');
+      } else {
+        event[i].classList.remove('__active');
+      }
     }
-  }
+  }; //my services animations
 
-  for (var i = 0; i < scrollByElementLeft.length; i++) {
-    var _windowHeight = window.innerHeight;
-    var _elementTop = scrollByElementLeft[i].getBoundingClientRect().top;
-    var _elementVisible = 150;
 
-    if (_elementTop < _windowHeight - _elementVisible) {
-      scrollByElementLeft[i].classList.add('__active');
-    } else {
-      scrollByElementLeft[i].classList.remove('__active');
+  var individualSessions = document.querySelectorAll('.individual-sessions');
+  var consultationForRepetitors = document.querySelectorAll('.consultation-for-repetitors');
+  var consultationForSpecificRequests = document.querySelectorAll('.consultation-for-specific-requests');
+  var telegramWithHelpfulInformation = document.querySelectorAll('.telegram-with-helpful-information');
+  var checklistForCardGames = document.querySelectorAll('.checklist-for-card-games');
+  var checklistWithUsefulStuff = document.querySelectorAll('.checklist-with-useful-stuff');
+  var telegramWithTextbooksAndMaterilas = document.querySelectorAll('.telegram-with-textbooks-and-materials');
+
+  var cycleForServices = function cycleForServices(event) {
+    for (var i = 0; i < event.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = event[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        event[i].classList.add('__animations');
+      }
     }
-  }
+  };
+
+  cycleForAbout(scrollByElementLeft);
+  cycleForAbout(scrollByElementRight);
+  cycleForServices(individualSessions);
+  cycleForServices(consultationForRepetitors);
+  cycleForServices(consultationForSpecificRequests);
+  cycleForServices(telegramWithHelpfulInformation);
+  cycleForServices(checklistForCardGames);
+  cycleForServices(checklistWithUsefulStuff);
+  cycleForServices(telegramWithTextbooksAndMaterilas);
 };
 
-window.addEventListener('scroll', reveal);
+window.addEventListener('scroll', reveal); // Btn script
+
+var btn = document.getElementById('btn');
+
+var changeContactsDisplay = function changeContactsDisplay() {
+  return document.querySelector('.contacts').style.display = 'flex';
+};
+
+var changeBtnDisplay = function changeBtnDisplay() {
+  return document.getElementById('btn').style.display = 'none';
+};
+
+btn.addEventListener('click', function () {
+  changeContactsDisplay();
+  changeBtnDisplay();
+});
 
 /***/ }),
 
