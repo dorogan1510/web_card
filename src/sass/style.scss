@@ -2,7 +2,7 @@
 * {
     padding: 0;
     margin: 0;
-    border: 0;
+    border: btn;
 }
 *,
 *:before,
@@ -86,11 +86,11 @@ body {
 }
 
 header {
+    margin: 30px 110px 150px 0;
+
     nav {
         display: flex;
         justify-content: flex-end;
-        margin-right: 110px;
-        margin-top: 30px;
 
         a {
             margin-left: 60px;
@@ -130,7 +130,6 @@ header {
 main {
     margin-bottom: 100px;
     .flex {
-        padding-top: 120px;
         display: flex;
         justify-content: space-between;
     }
@@ -200,7 +199,10 @@ main {
         background-color: #856d47;
 
         border-radius: 20px;
-        transition: background-color 1s;
+        border: 0;
+        transition: background-color 1s, opacity 0.5s linear;
+
+        opacity: 1;
 
         &:hover {
             background-color: #a88a5a;
@@ -208,11 +210,14 @@ main {
     }
 
     .contacts {
-        display: none;
+        display: flex;
         align-items: center;
         margin-left: 70px;
+        opacity: 0;
 
-        width: 750px;
+        transition: opacity 1s linear;
+
+        width: 860px;
         height: 90px;
 
         border-radius: 20px;
@@ -261,24 +266,74 @@ main {
             color: #2f2f2f;
 
             margin-right: 50px;
-            margin-bottom: 20px;
             padding-left: 10px;
         }
 
         &__social_link {
+            border-radius: 50%;
+
+            transition: 250ms;
             width: 60px;
             height: 60px;
 
             margin-left: 36px;
+
+            filter: sepia(70%);
         }
+    }
+}
+
+.telegram {
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 136, 204, 0.1);
+        color: #0088cc;
+        box-shadow: 0 0 24px 0 #0088cc;
+        filter: sepia(0%);
+    }
+}
+
+.skype {
+    &:hover,
+    &:focus {
+        color: #00aff0;
+        box-shadow: 0 0 24px 0 #00aff0;
+        filter: grayscale(0%);
+    }
+}
+
+.whatsapp {
+    &:hover,
+    &:focus {
+        color: #25d366;
+        box-shadow: 0 0 24px 0 #25d366;
+        filter: grayscale(0%);
+    }
+}
+
+.vk {
+    &:hover,
+    &:focus {
+        color: #5e89bc;
+        box-shadow: 0 0 24px 0 #6494cf;
+        filter: grayscale(0%);
+    }
+}
+
+.instagram {
+    &:hover,
+    &:focus {
+        color: #e1306c;
+        box-shadow: 0 0 24px 0 #e1306c;
+        filter: grayscale(0%);
     }
 }
 
 // About me///////////////////////////////
 
 .about {
-    width: 800px;
-    margin: 0 auto 100px;
+    width: 1000px;
+    margin: 0 auto 150px;
 }
 
 .about-left {
@@ -348,7 +403,7 @@ main {
 
     background: #2f2f2f;
     border-radius: 40px;
-    box-shadow: 2px 0px 2px #2f2f2f;
+    box-shadow: 2px 0px #2f2f2f;
 
     color: white;
 
@@ -384,7 +439,7 @@ main {
 
     background: #856d47;
     border-radius: 40px;
-    box-shadow: 2px 0px 2px #856d47;
+    box-shadow: 2px 0px #856d47;
 
     color: white;
 
@@ -404,7 +459,11 @@ main {
 
 //------------------------------------------------//
 
-// Sections///////////////////////////////////
+// Services///////////////////////////////////
+
+.services {
+    margin-bottom: 150px;
+}
 
 section {
     display: flex;
@@ -418,7 +477,7 @@ section {
     color: white;
 
     border-radius: 20px;
-    box-shadow: 2px 0px 5px #856d47;
+    box-shadow: 2px 0px #856d47;
 
     h2 {
         font-size: 24px;
@@ -692,3 +751,81 @@ footer {
     padding-left: 120px;
     margin-top: 90px;
 }
+
+// Start of reviews/////////////////////////
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__flex {
+        display: flex;
+        justify-content: center;
+        perspective: 300px;
+    }
+
+    .box-left {
+        margin-right: 40px;
+        margin-bottom: 20px;
+
+        opacity: 0;
+        transition: 1s all ease;
+
+        &.__animations {
+            opacity: 1;
+            animation: arrive8 1s ease;
+            @keyframes arrive8 {
+                0% {
+                    transform: translate3d(-1000px, 600px, 300px) rotateX(60deg)
+                        rotateY(60deg);
+                }
+
+                100% {
+                    transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                        rotateY(0deg);
+                }
+            }
+        }
+    }
+
+    .box-right {
+        margin-right: 40px;
+        margin-bottom: 20px;
+
+        opacity: 0;
+        transition: 1s all ease;
+
+        &.__animations {
+            opacity: 1;
+            animation: arrive9 1s ease;
+            @keyframes arrive9 {
+                0% {
+                    transform: translate3d(1000px, 600px, 300px) rotateX(60deg)
+                        rotateY(60deg);
+                }
+
+                100% {
+                    transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                        rotateY(0deg);
+                }
+            }
+        }
+    }
+
+    img {
+        border-radius: 20px;
+
+        width: 315px;
+        height: 560px;
+
+        transition: 0.3s linear;
+
+        &:hover {
+            transition: 0.3s linear;
+
+            width: 360px;
+            height: 640px;
+        }
+    }
+}
+// End of reviews------------------------------///

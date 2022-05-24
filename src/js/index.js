@@ -17,6 +17,9 @@ const reveal = () => {
         }
     }
 
+    cycleForAbout(scrollByElementLeft)
+    cycleForAbout(scrollByElementRight)
+
     //my services animations
     const individualSessions = document.querySelectorAll('.individual-sessions')
     const consultationForRepetitors = document.querySelectorAll(
@@ -51,9 +54,6 @@ const reveal = () => {
         }
     }
 
-    cycleForAbout(scrollByElementLeft)
-    cycleForAbout(scrollByElementRight)
-
     cycleForServices(individualSessions)
     cycleForServices(consultationForRepetitors)
     cycleForServices(consultationForSpecificRequests)
@@ -69,13 +69,48 @@ window.addEventListener('scroll', reveal)
 
 const btn = document.getElementById('btn')
 
-const changeContactsDisplay = () =>
-    (document.querySelector('.contacts').style.display = 'flex')
+const changeBtnDisplay = () => {
+    const delayAnimation = () => {
+        document.getElementById('btn').style.display = 'none'
+    }
+    document.getElementById('btn').style.visibility = 'none'
 
-const changeBtnDisplay = () =>
-    (document.getElementById('btn').style.display = 'none')
+    setTimeout(delayAnimation, 800)
+
+    document.getElementById('btn').style.opacity = '0'
+}
+
+const changeContactsDisplay = () => {
+    const delayAnimation = () => {
+        document.querySelector('.contacts').style.display = 'flex'
+        document.querySelector('.contacts').style.opacity = '1'
+    }
+    setTimeout(delayAnimation, 800)
+}
 
 btn.addEventListener('click', function () {
     changeContactsDisplay()
     changeBtnDisplay()
 })
+
+// reviews script
+
+const revealReviews = () => {
+    const cycleForReviews = event => {
+        for (var i = 0; i < event.length; i++) {
+            const windowHeight = window.innerHeight
+            const elementTop = event[i].getBoundingClientRect().top
+            const elementVisible = 150
+
+            if (elementTop < windowHeight - elementVisible) {
+                event[i].classList.add('__animations')
+            }
+        }
+    }
+    const boxLeft = document.querySelectorAll('.box-left')
+    const boxRight = document.querySelectorAll('.box-right')
+
+    cycleForReviews(boxLeft)
+    cycleForReviews(boxRight)
+}
+window.addEventListener('scroll', revealReviews)

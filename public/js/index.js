@@ -24,8 +24,10 @@ var reveal = function reveal() {
         event[i].classList.remove('__active');
       }
     }
-  }; //my services animations
+  };
 
+  cycleForAbout(scrollByElementLeft);
+  cycleForAbout(scrollByElementRight); //my services animations
 
   var individualSessions = document.querySelectorAll('.individual-sessions');
   var consultationForRepetitors = document.querySelectorAll('.consultation-for-repetitors');
@@ -47,8 +49,6 @@ var reveal = function reveal() {
     }
   };
 
-  cycleForAbout(scrollByElementLeft);
-  cycleForAbout(scrollByElementRight);
   cycleForServices(individualSessions);
   cycleForServices(consultationForRepetitors);
   cycleForServices(consultationForSpecificRequests);
@@ -62,18 +62,50 @@ window.addEventListener('scroll', reveal); // Btn script
 
 var btn = document.getElementById('btn');
 
-var changeContactsDisplay = function changeContactsDisplay() {
-  return document.querySelector('.contacts').style.display = 'flex';
+var changeBtnDisplay = function changeBtnDisplay() {
+  var delayAnimation = function delayAnimation() {
+    document.getElementById('btn').style.display = 'none';
+  };
+
+  document.getElementById('btn').style.visibility = 'none';
+  setTimeout(delayAnimation, 800);
+  document.getElementById('btn').style.opacity = '0';
 };
 
-var changeBtnDisplay = function changeBtnDisplay() {
-  return document.getElementById('btn').style.display = 'none';
+var changeContactsDisplay = function changeContactsDisplay() {
+  var delayAnimation = function delayAnimation() {
+    document.querySelector('.contacts').style.display = 'flex';
+    document.querySelector('.contacts').style.opacity = '1';
+  };
+
+  setTimeout(delayAnimation, 800);
 };
 
 btn.addEventListener('click', function () {
   changeContactsDisplay();
   changeBtnDisplay();
-});
+}); // reviews script
+
+var revealReviews = function revealReviews() {
+  var cycleForReviews = function cycleForReviews(event) {
+    for (var i = 0; i < event.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = event[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        event[i].classList.add('__animations');
+      }
+    }
+  };
+
+  var boxLeft = document.querySelectorAll('.box-left');
+  var boxRight = document.querySelectorAll('.box-right');
+  cycleForReviews(boxLeft);
+  cycleForReviews(boxRight);
+};
+
+window.addEventListener('scroll', revealReviews);
 
 /***/ }),
 
