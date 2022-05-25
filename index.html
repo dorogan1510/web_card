@@ -12,274 +12,349 @@
         <title>Document</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <a href="#id1">Обо мне</a>
-                <a href="#id2">Мои услуги</a>
-                <a href="#id3">Отзывы</a>
-            </nav>
-        </header>
-
-        <!-- Start of the main landing -->
-        <main>
-            <div class="flex">
-                <div class="left-side">
-                    <h1>
-                        Привет! Меня зовут Ксения и я твой <br />личный
-                        преподаватель
-                    </h1>
-                    <p>
-                        Главное для меня — комфорт каждого ученика во время
-                        всего процесса обучения
-                    </p>
-                </div>
-
-                <img class="img" src="./src/img/bg1.jpg" />
-            </div>
-
-            <button class="btn" type="button" id="btn">
-                Свяжитесь со мной!
-            </button>
-            <div class="contacts">
-                <a class="contacts__email" href="mailto: ksunchik459@gmail.com"
-                    >ksunchik459@gmail.com</a
-                >
-                <div>
-                    <a href="https://vk.me/id246389144" target="_blank"
-                        ><img
-                            class="contacts__social_link vk"
-                            src="./src/img/vk2.svg"
-                    /></a>
-                    <a
-                        href="https://api.whatsapp.com/send?phone=79523715490"
-                        target="_blank"
-                        ><img
-                            class="contacts__social_link whatsapp"
-                            src="./src/img/whatsapp2.svg"
-                    /></a>
-                    <a href="https://t.me/ksenia459" target="_blank"
-                        ><img
-                            class="contacts__social_link telegram"
-                            src="./src/img/telegram2.svg"
-                    /></a>
-                    <a href="skype:live:ksunchik459?chat" target="_blank"
-                        ><img
-                            class="contacts__social_link skype"
-                            src="./src/img/skype2.svg"
-                    /></a>
-                    <a
-                        href="https://www.instagram.com/morkoovochka/"
-                        target="_blank"
-                        ><img
-                            class="contacts__social_link instagram"
-                            src="./src/img/instagram.svg"
-                    /></a>
-                </div>
-            </div>
-        </main>
-        <!-- End of the main landing -->
-
-        <!-- About me -->
-        <div class="about" id="id1">
-            <div class="bubble-left about-left">
-                А какой у тебя опыт преподавания?
-            </div>
-            <br />
-            <div class="bubble-right about-right">
-                Я преподаю языки с 2017 года, обучила более 80 учеников.
-            </div>
-            <br />
-            <div class="bubble-left about-left">
-                А у тебя есть какое-то образование?
-            </div>
-            <div class="bubble-right about-right">
-                Я закончила Санкт-Петербургский государственный университет,
-                Восточный факультет.
-            </div>
-            <div class="bubble-left about-left">
-                А что мы будем делать на уроках?
-            </div>
-            <div class="bubble-right about-right">
-                На своих уроках я даю грамматическую базу языка, разговорную
-                практику и практику чтения и перевода. Также мы смотрим и
-                разбираем видео, отрывки из фильмов, слушаем ваши любимые песни.
-            </div>
-            <div class="bubble-left about-left">
-                У всех учеников одна программа или у тебя индивидуальный подход?
-            </div>
-            <div class="bubble-right about-right">
-                Для каждого ученика разрабатывается индивидуальная программа в
-                соответствии с целями.
-            </div>
-            <div class="bubble-left about-left">
-                А какие языки ты преподаешь?
-            </div>
-            <div class="bubble-right about-right">
-                Работаю с четырьмя языками (английский, французский, арабский,
-                турецкий) и буду рада помочь вам шаг за шагом осуществить свою
-                мечту заговорить на английском!
-            </div>
-            <div class="bubble-left about-left">
-                Интересно, а сколько стоит твой урок?
-            </div>
-            <div class="bubble-right about-right">
-                Все цены и услуги можно посмотреть ниже 👇
-            </div>
-        </div>
-        <!-- End of About me -->
-
-        <!-- My services -->
-        <div class="services" id="id2">
-            <section class="individual-sessions">
-                <h2>Индивидуальные занятия</h2>
-                <div class="individual-sessions__flex-container">
-                    <p>
-                        Формат обучения — только онлайн 60 минут — 20$ <br />90
-                        минут — 30$ <br />Оплату также можно произвести в любой
-                        удобной для вас валюте по текущему курсу
-                    </p>
-                    <div class="rightside">
-                        <h3>Доступные для изучения языки:</h3>
-                        <ul>
-                            <li>Английский</li>
-                            <li>Французский</li>
-                            <li>Арабский</li>
-                            <li>Турецкий</li>
-                        </ul>
+        <div class="page">
+            <header>
+                <div class="container">
+                    <nav class="nav">
+                        <a href="#id1">Обо мне</a>
+                        <a href="#id2">Мои услуги</a>
+                        <a href="#id3">Отзывы</a>
+                    </nav>
+                    <!-- Start of hamburger -->
+                    <div id="menu">
+                        <div id="menu-bar">
+                            <div id="bar1" class="bar"></div>
+                            <div id="bar2" class="bar"></div>
+                            <div id="bar3" class="bar"></div>
+                        </div>
+                        <div class="menu-nav" id="menu-nav">
+                            <ul>
+                                <li><a href="#id1">Обо мне</a></li>
+                                <li><a href="#id2">Мои услуги</a></li>
+                                <li><a href="#id3">Отзывы</a></li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="menu-bg" id="menu-bg"></div>
+                    <!-- End of hamburger -->
                 </div>
-            </section>
-            <div class="first-flex-main-section">
-                <section class="consultation-for-repetitors">
-                    <h2>Консультация для преподавателей</h2>
-                    <div class="consultation-for-repetitors__flex-container">
-                        <p>
-                            Длительность — 2 часа <br />Стоимость — 3000₽
-                            <br /><br />
-                            Бонусом вы получите конспект всей консультации и чек
-                            лист, в котором собраны и проанализированы самые
-                            актуальные материалы, которые вы сможете
-                            использовать в своих занятиях.
-                            <br /><br />На консультации мы разберем все
-                            актуальные вопросы, которые могут возникнуть у вас в
-                            начале пути. Подробный план можно посмотреть в
-                            закрепленной сторис "Консультации" в инстаграме.
-                        </p>
-                    </div>
-                </section>
-                <div class="first-flex-main-section__right-side">
-                    <section class="consultation-for-specific-requests">
-                        <h2>Консультация по конкретным запросам</h2>
-                        <div
-                            class="consultation-for-specific-requests__flex-container"
-                        >
+            </header>
+
+            <!-- Start of the main landing -->
+            <div class="container">
+                <main>
+                    <div class="flex">
+                        <div class="left-side">
+                            <h1>
+                                Привет! Меня зовут Ксения и я твой <br />личный
+                                преподаватель
+                            </h1>
                             <p>
-                                Длительность 1 ч. — Стоимость 1500₽ <br />Мы
-                                разберем ваши вопросы и рассмотрим конкретные
-                                ситуации во время процесса работы.
+                                Главное для меня — комфорт каждого ученика во
+                                время всего процесса обучения
                             </p>
                         </div>
-                    </section>
 
-                    <section class="telegram-with-helpful-information">
-                        <h2>Телеграм канал с полезной информацией</h2>
-                        <div
-                            class="telegram-with-helpful-information__flex-container"
-                        >
-                            <p>
-                                Стоимость — бесплатно <br />Здесь вы можете
-                                найти множество текстовых, аудио и видео
-                                материалов, готовых заданий, рабочих листов и
-                                обучающих ресурсов.
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <!-- End of first flex-main-section -->
-
-            <div class="second-main-flex-section">
-                <div class="second-main-flex-section_left-side">
-                    <section class="checklist-for-card-games">
-                        <h2>Чек лист по играм с карточками</h2>
-                        <div class="checklist-for-card-games__flex-container">
-                            <p>Стоимость — бесплатно</p>
-                        </div>
-                    </section>
-
-                    <section class="checklist-with-useful-stuff">
-                        <h2>Чек лист с полезными материалами</h2>
-                        <div
-                            class="checklist-with-useful-stuff__flex-container"
-                        >
-                            <p>
-                                Стоимость — 500₽. Чтобы приобрести чек лист
-                                напишите мне в личные сообщения. В нем собраны
-                                самые актуальные и современные учебники, пособия
-                                и другие дополнительные материалы.
-                            </p>
-                        </div>
-                    </section>
-                </div>
-
-                <section class="telegram-with-textbooks-and-materials">
-                    <h2>
-                        Телеграм канал с учебниками и материалами для занятий
-                    </h2>
-                    <div
-                        class="telegram-with-textbooks-and-materials__flex-container"
-                    >
-                        <p>
-                            Доступ в канал — навсегда <br />Стоимость — 700₽
-                            <br />Чтобы получить ссылку на канал напишите мне в
-                            личные сообщения. <br /><br />Здесь находятся
-                            множество популярных учебников и книг на английском
-                            и французском языках, а также мои авторские уроки,
-                            которые вы сможете применить в своей работе. Примеры
-                            учебников на канале (English file; Go Getter;
-                            Impact; Speakout; Kidsbox; Oxford phonics)
-                        </p>
+                        <img class="img" src="./src/img/bg1.jpg" />
                     </div>
-                </section>
-            </div>
-            <!-- End of second main-flex-section -->
-        </div>
-        <div class="about" id="id1">
-            <div class="bubble-left about-left">
-                По ценам все понятно, а у тебя уже есть отзывы?
-            </div>
-            <div class="bubble-right about-right">
-                Конечно, немного отзывов ниже, а все остальные в моем инстаграме
-            </div>
-        </div>
 
-        <!-- Start of reviews -->
-        <div class="reviews" id="id3">
-            <div class="reviews__flex">
-                <div class="box-left">
-                    <img src="./src/img/Новая папка/1.jpg" />
-                </div>
-                <div class="box-left">
-                    <img class="img" src="./src/img/Новая папка/2.jpg" />
-                </div>
-                <div class="box-right">
-                    <img class="img" src="./src/img/Новая папка/3.jpg" />
-                </div>
-            </div>
-            <div class="reviews__flex">
-                <div class="box-left">
-                    <img class="img" src="./src/img/Новая папка/4.jpg" />
-                </div>
-                <div class="box-right">
-                    <img class="img" src="./src/img/Новая папка/5.jpg" />
-                </div>
-                <div class="box-right">
-                    <img class="img" src="./src/img/Новая папка/6.jpg" />
-                </div>
-            </div>
-        </div>
+                    <button class="btn" type="button" id="btn">
+                        Свяжитесь со мной!
+                    </button>
+                    <div class="contacts">
+                        <a
+                            class="contacts__email"
+                            href="mailto: ksunchik459@gmail.com"
+                            >ksunchik459@gmail.com</a
+                        >
+                        <div>
+                            <a href="https://vk.me/id246389144" target="_blank"
+                                ><img
+                                    class="contacts__social_link vk"
+                                    src="./src/img/vk2.svg"
+                            /></a>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=79523715490"
+                                target="_blank"
+                                ><img
+                                    class="contacts__social_link whatsapp"
+                                    src="./src/img/whatsapp2.svg"
+                            /></a>
+                            <a href="https://t.me/ksenia459" target="_blank"
+                                ><img
+                                    class="contacts__social_link telegram"
+                                    src="./src/img/telegram2.svg"
+                            /></a>
+                            <a
+                                href="skype:live:ksunchik459?chat"
+                                target="_blank"
+                                ><img
+                                    class="contacts__social_link skype"
+                                    src="./src/img/skype2.svg"
+                            /></a>
+                            <a
+                                href="https://www.instagram.com/morkoovochka/"
+                                target="_blank"
+                                ><img
+                                    class="contacts__social_link instagram"
+                                    src="./src/img/instagram.svg"
+                            /></a>
+                        </div>
+                    </div>
+                </main>
+                <!-- End of the main landing -->
 
-        <!-- End of reviews -->
+                <!-- About me -->
+                <div class="about" id="id1">
+                    <div>
+                        <div class="bubble-left about-left">
+                            А какой у тебя опыт преподавания?
+                        </div>
+                        <br />
+                        <div class="bubble-right about-right">
+                            Я преподаю языки с 2017 года, обучила более 80
+                            учеников.
+                        </div>
+                        <br />
+                        <div class="bubble-left about-left">
+                            А у тебя есть какое-то образование?
+                        </div>
+                        <div class="bubble-right about-right">
+                            Я закончила Санкт-Петербургский государственный
+                            университет, Восточный факультет.
+                        </div>
+                        <div class="bubble-left about-left">
+                            А что мы будем делать на уроках?
+                        </div>
+                        <div class="bubble-right about-right">
+                            На своих уроках я даю грамматическую базу языка,
+                            разговорную практику и практику чтения и перевода.
+                            Также мы смотрим и разбираем видео, отрывки из
+                            фильмов, слушаем ваши любимые песни.
+                        </div>
+                        <div class="bubble-left about-left">
+                            У всех учеников одна программа или у тебя
+                            индивидуальный подход?
+                        </div>
+                        <div class="bubble-right about-right">
+                            Для каждого ученика разрабатывается индивидуальная
+                            программа в соответствии с целями.
+                        </div>
+                        <div class="bubble-left about-left">
+                            А какие языки ты преподаешь?
+                        </div>
+                        <div class="bubble-right about-right">
+                            Работаю с четырьмя языками (английский, французский,
+                            арабский, турецкий) и буду рада помочь вам шаг за
+                            шагом осуществить свою мечту заговорить на
+                            английском!
+                        </div>
+                        <div class="bubble-left about-left">
+                            Интересно, а сколько стоит твой урок?
+                        </div>
+                        <div class="bubble-right about-right">
+                            Все цены и услуги можно посмотреть ниже 👇
+                        </div>
+                    </div>
+                </div>
+                <!-- End of About me -->
+
+                <!-- My services -->
+                <div class="services" id="id2">
+                    <section class="section individual-sessions">
+                        <h2>Индивидуальные занятия</h2>
+                        <div class="individual-sessions__flex-container">
+                            <p>
+                                Формат обучения — только онлайн<br />
+                                60 минут — 20$ <br />90 минут — 30$
+                                <br /><br />Оплату также можно произвести в
+                                любой удобной для вас валюте по текущему курсу
+                            </p>
+                            <div class="rightside">
+                                <h3>Доступные для изучения языки:</h3>
+                                <ul>
+                                    <li>Английский</li>
+                                    <li>Французский</li>
+                                    <li>Арабский</li>
+                                    <li>Турецкий</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="first-flex-main-section">
+                        <section class="section consultation-for-repetitors">
+                            <h2>Консультация для преподавателей</h2>
+                            <p>
+                                Длительность — 2 часа <br />Стоимость — 3000₽
+                                <br /><br />
+                                Бонусом вы получите конспект всей консультации и
+                                чек лист, в котором собраны и проанализированы
+                                самые актуальные материалы, которые вы сможете
+                                использовать в своих занятиях.
+                                <br /><br />На консультации мы разберем все
+                                актуальные вопросы, которые могут возникнуть у
+                                вас в начале пути. Подробный план можно
+                                посмотреть в закрепленной сторис "Консультации"
+                                в инстаграме.
+                            </p>
+                        </section>
+                        <div class="first-flex-main-section__right-side">
+                            <section
+                                class="section consultation-for-specific-requests"
+                            >
+                                <h2>Консультация по конкретным запросам</h2>
+                                <p>
+                                    Длительность 1 ч. — Стоимость 1500₽
+                                    <br />Мы разберем ваши вопросы и рассмотрим
+                                    конкретные ситуации во время процесса
+                                    работы.
+                                </p>
+                            </section>
+
+                            <section
+                                class="section telegram-with-helpful-information"
+                            >
+                                <div
+                                    class="telegram-with-helpful-information__flex-container"
+                                >
+                                    <h2>
+                                        Телеграм канал с полезной информацией
+                                    </h2>
+                                    <a
+                                        target="_blank"
+                                        href="https://t.me/morkoovochka"
+                                        ><img
+                                            class="telegram-with-helpful-information__button"
+                                            src="./src/img/telegram.svg"
+                                        />
+                                    </a>
+                                </div>
+                                <p>
+                                    Кликай и вступай, стоимость — бесплатно.
+                                    <br />Здесь вы можете найти множество
+                                    текстовых, аудио, видео материалов и многое
+                                    другое.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- End of first flex-main-section -->
+
+                    <div class="second-main-flex-section">
+                        <div class="second-main-flex-section_left-side">
+                            <section class="section checklist-for-card-games">
+                                <div
+                                    class="checklist-for-card-games__flex-container"
+                                >
+                                    <h2>Чек лист по играм с карточками</h2>
+                                    <a
+                                        target="_blank"
+                                        class="checklist-for-card-games__button"
+                                        href="https://drive.google.com/file/u/2/d/1JkaEE_4DATLcXFmFTTDSc84fKYmrNYvR/view?usp=sharing"
+                                    >
+                                        Чек лист
+                                    </a>
+                                    <p>Кликай, скачивай и пользуйся</p>
+                                </div>
+                                <p>Стоимость — бесплатно</p>
+                            </section>
+
+                            <section
+                                class="section checklist-with-useful-stuff"
+                            >
+                                <h2>Чек лист с полезными материалами</h2>
+                                <div
+                                    class="checklist-with-useful-stuff__flex-container"
+                                >
+                                    <p>
+                                        Стоимость — 500₽. Чтобы приобрести чек
+                                        лист напишите мне в личные сообщения. В
+                                        нем собраны самые актуальные и
+                                        современные учебники, пособия и другие
+                                        дополнительные материалы.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <section
+                            class="section telegram-with-textbooks-and-materials"
+                        >
+                            <h2>
+                                Телеграм канал с учебниками и материалами для
+                                занятий
+                            </h2>
+
+                            <p>
+                                Доступ в канал — навсегда <br />Стоимость — 700₽
+                                <br />Чтобы получить ссылку на канал напишите
+                                мне в личные сообщения. <br /><br />Здесь
+                                находятся множество популярных учебников и книг
+                                на английском и французском языках, а также мои
+                                авторские уроки, которые вы сможете применить в
+                                своей работе. Примеры учебников на канале
+                                (English file; Go Getter; Impact; Speakout;
+                                Kidsbox; Oxford phonics)
+                            </p>
+                        </section>
+                    </div>
+                    <!-- End of second main-flex-section -->
+                </div>
+                <div class="about" id="id1">
+                    <div class="bubble-left about-left">
+                        По ценам все понятно, а у тебя уже есть отзывы?
+                    </div>
+                    <div class="bubble-right about-right">
+                        Конечно, немного отзывов ниже, а все остальные в моем
+                        инстаграме
+                    </div>
+                </div>
+
+                <!-- Start of reviews -->
+                <div class="reviews" id="id3">
+                    <div class="reviews__flex">
+                        <div class="box-left">
+                            <img src="./src/img/Новая папка/1.jpg" />
+                        </div>
+                        <div class="second-box box-left">
+                            <img
+                                class="img"
+                                src="./src/img/Новая папка/2.jpg"
+                            />
+                        </div>
+                        <div class="box-right">
+                            <img
+                                class="img"
+                                src="./src/img/Новая папка/3.jpg"
+                            />
+                        </div>
+                    </div>
+                    <div class="reviews__flex">
+                        <div class="box-left">
+                            <img
+                                class="img"
+                                src="./src/img/Новая папка/4.jpg"
+                            />
+                        </div>
+                        <div class="second-box box-right">
+                            <img
+                                class="img"
+                                src="./src/img/Новая папка/5.jpg"
+                            />
+                        </div>
+                        <div class="box-right">
+                            <img
+                                class="img"
+                                src="./src/img/Новая папка/6.jpg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of reviews -->
+        </div>
     </body>
     <script src="./public/js/index.js"></script>
 </html>

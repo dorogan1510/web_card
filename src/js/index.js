@@ -81,11 +81,14 @@ const changeBtnDisplay = () => {
 }
 
 const changeContactsDisplay = () => {
-    const delayAnimation = () => {
+    const delayAnimation1 = () => {
         document.querySelector('.contacts').style.display = 'flex'
+    }
+    const delayAnimation2 = () => {
         document.querySelector('.contacts').style.opacity = '1'
     }
-    setTimeout(delayAnimation, 800)
+    setTimeout(delayAnimation1, 800)
+    setTimeout(delayAnimation2, 1000)
 }
 
 btn.addEventListener('click', function () {
@@ -114,3 +117,12 @@ const revealReviews = () => {
     cycleForReviews(boxRight)
 }
 window.addEventListener('scroll', revealReviews)
+
+// Hamburger
+function menuOnClick() {
+    document.getElementById('menu-bar').classList.toggle('change')
+    document.getElementById('menu-nav').classList.toggle('change')
+    document.getElementById('menu-bg').classList.toggle('change-bg')
+}
+
+document.getElementById('menu-bar').addEventListener('click', menuOnClick)
