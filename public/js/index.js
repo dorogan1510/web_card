@@ -36,6 +36,7 @@ var reveal = function reveal() {
   var checklistForCardGames = document.querySelectorAll('.checklist-for-card-games');
   var checklistWithUsefulStuff = document.querySelectorAll('.checklist-with-useful-stuff');
   var telegramWithTextbooksAndMaterilas = document.querySelectorAll('.telegram-with-textbooks-and-materials');
+  var offlineLessons = document.querySelectorAll('.offline-lessons');
 
   var cycleForServices = function cycleForServices(event) {
     for (var i = 0; i < event.length; i++) {
@@ -56,6 +57,7 @@ var reveal = function reveal() {
   cycleForServices(checklistForCardGames);
   cycleForServices(checklistWithUsefulStuff);
   cycleForServices(telegramWithTextbooksAndMaterilas);
+  cycleForServices(offlineLessons);
 };
 
 window.addEventListener('scroll', reveal); // Btn script

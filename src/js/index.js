@@ -41,6 +41,7 @@ const reveal = () => {
     const telegramWithTextbooksAndMaterilas = document.querySelectorAll(
         '.telegram-with-textbooks-and-materials'
     )
+    const offlineLessons = document.querySelectorAll('.offline-lessons')
 
     const cycleForServices = event => {
         for (var i = 0; i < event.length; i++) {
@@ -61,6 +62,7 @@ const reveal = () => {
     cycleForServices(checklistForCardGames)
     cycleForServices(checklistWithUsefulStuff)
     cycleForServices(telegramWithTextbooksAndMaterilas)
+    cycleForServices(offlineLessons)
 }
 
 window.addEventListener('scroll', reveal)
